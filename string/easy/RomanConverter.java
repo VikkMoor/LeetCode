@@ -1,8 +1,17 @@
 package easy;
 
 public class RomanConverter {
+    public static void main(String args[])
+    {
+        RomanConverter ob = new RomanConverter();
 
-
+        // Considering inputs given are valid
+        String str = "MCMIV";
+        System.out.println(str);
+        System.out.println("Integer value"
+                + " is "
+                + ob.romanToInt(str));
+    }
 
     public int value(char r) {
         if (r == 'I') return 1;
