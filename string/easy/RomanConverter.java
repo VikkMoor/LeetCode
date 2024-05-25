@@ -3,14 +3,12 @@ package easy;
 public class RomanConverter {
     public static void main(String args[])
     {
-        RomanConverter ob = new RomanConverter();
+        RomanConverter num = new RomanConverter();
 
         // Considering inputs given are valid
         String str = "MCMIV";
-        System.out.println(str);
-        System.out.println("Integer value"
-                + " is "
-                + ob.romanToInt(str));
+        System.out.println("Roman number is: " + str);
+        System.out.println("Integer value is: " + num.romanToInt(str));
     }
 
     public int value(char r) {
