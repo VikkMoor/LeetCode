@@ -1,7 +1,7 @@
 package easy;
 
 public class RomanConverter {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         RomanConverter num = new RomanConverter();
 

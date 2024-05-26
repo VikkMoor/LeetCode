@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CommonPrefix {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         CommonPrefix letters = new CommonPrefix();
         String[] test = {"flower","flow","flight"};
         //System.out.println(Arrays.toString(test)); // (showing array in the right way just for cheking);
@@ -28,8 +28,7 @@ public class CommonPrefix {
         while (i < end && strs[0].charAt(i) == strs[size - 1].charAt(i))
             i++;
 
-        String res = strs[0].substring(0, i);
-        return res;
+        return strs[0].substring(0, i);
     }
 
 }
