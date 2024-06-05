@@ -6,7 +6,7 @@ public class RomanConverter {
         RomanConverter num = new RomanConverter();
 
         // Considering inputs given are valid
-        String str = "MCMIV";
+        String str = "MCMXCIV";
         System.out.println("Roman number is: " + str);
         System.out.println("Integer value is: " + num.romanToInt(str));
     }
