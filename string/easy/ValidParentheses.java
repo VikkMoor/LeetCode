@@ -11,11 +11,9 @@ public class ValidParentheses {
 
 
     public boolean isValid(String s) {
-        boolean a = true;
+        // for the case as ((:
+        boolean a = s.charAt(s.length() - 1) != '(' && s.charAt(s.length() - 1) != '{' && s.charAt(s.length() - 1) != '[';
 
-        if (s.charAt(s.length() - 1) == '(' || s.charAt(s.length() - 1) == '{' || s.charAt(s.length() - 1) == '['){
-            a = false; // for the case as ((;
-        }
         if (s.length() % 2 != 0) {
             a = false;
         } else {
@@ -37,7 +35,7 @@ public class ValidParentheses {
                     }
                 }
             }
-            if (stack.isEmpty() != true) a = false; // for the case as [[[];
+            if (!stack.isEmpty()) a = false; // for the case as [[[];
         }
         return a;
     }
