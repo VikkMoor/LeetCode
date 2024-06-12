@@ -5,7 +5,7 @@ import java.util.*;
 public class ValidParentheses {
     public static void main(String[] args) {
         ValidParentheses res = new ValidParentheses();
-        String test = "()";
+        String test = "(){[()]}";
         System.out.println(res.isValid(test));
     }
 
