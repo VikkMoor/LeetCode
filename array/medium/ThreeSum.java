@@ -1,7 +1,6 @@
 package medium;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ThreeSum {
     public static void main(String[] args) {
@@ -25,14 +24,14 @@ public class ThreeSum {
                 int thirdNum = nums[rightPointer];
                 int currentSum = firstNum + secondNum + thirdNum;
                 if (currentSum == 0) {
-                    list.add((Arrays.asList(new Integer[]{firstNum, secondNum, thirdNum})));
+                    list.add((Arrays.asList(firstNum, secondNum, thirdNum)));
                     leftPointer++;
                     while (nums[leftPointer] == nums[leftPointer - 1] && leftPointer < rightPointer){
                         leftPointer++;
                     }
                 } else if (currentSum > 0) {
                     rightPointer--;
-                } else if (currentSum < 0) {
+                } else {
                     leftPointer++;
                 }
             }
