@@ -26,6 +26,7 @@ public class ThreeSum {
                 if (currentSum == 0) {
                     list.add((Arrays.asList(firstNum, secondNum, thirdNum)));
                     leftPointer++;
+                    // checking equal values to except duplicates (in leftPointer's work):
                     while (nums[leftPointer] == nums[leftPointer - 1] && leftPointer < rightPointer) {
                         leftPointer++;
                     }
@@ -35,6 +36,7 @@ public class ThreeSum {
                     leftPointer++;
                 }
             }
+            // checking equal values to except duplicates(in firstnumber's work):
             int j = i;
             while (j < nums.length - 2 && nums[j] == nums[j + 1]) {
                 i++;
