@@ -5,13 +5,13 @@ import java.util.*;
 public class ThreeSum {
     public static void main(String[] args) {
         ThreeSum tsum = new ThreeSum();
-        int[] arr = {-1, 0, 1, 2, -1, -4};
+        int[] arr = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
         // to show array in the right way just for checking:
         System.out.println(tsum.threeSum(arr));
     }
 
     public List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums); // for make it possible to solve with "two pointers";
+        Arrays.sort(nums); // to make it possible to solve with "two pointers";
 
         List<List<Integer>> list = new ArrayList<>(); // to store ready triplets;
 
@@ -26,7 +26,7 @@ public class ThreeSum {
                 if (currentSum == 0) {
                     list.add((Arrays.asList(firstNum, secondNum, thirdNum)));
                     leftPointer++;
-                    while (nums[leftPointer] == nums[leftPointer - 1] && leftPointer < rightPointer){
+                    while (nums[leftPointer] == nums[leftPointer - 1] && leftPointer < rightPointer) {
                         leftPointer++;
                     }
                 } else if (currentSum > 0) {
@@ -34,6 +34,11 @@ public class ThreeSum {
                 } else {
                     leftPointer++;
                 }
+            }
+            int j = i;
+            while (j < nums.length - 2 && nums[j] == nums[j + 1]) {
+                i++;
+                j++;
             }
         }
         return list;
